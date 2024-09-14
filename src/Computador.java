@@ -20,9 +20,19 @@ public class Computador {
         System.out.println("Preço: " + preco);
         System.out.println("Processador: " + processador.nome + " (" + processador.capacidade + "Mhz)");
         System.out.println(mRAM.nome + ": " + mRAM.capacidade + " Gb");
-        System.out.println("Armazenamento: " + disco.nome + " " + disco.capacidade + "Gb");
+        if(disco.capacidade < 10) {
+            System.out.println("Armazenamento: " + disco.nome + " " + disco.capacidade + "Gb");
+        }
+        else {
+            System.out.println("Armazenamento: " + disco.nome + " " + disco.capacidade + "Tb");
+        }
         System.out.println("Sistema: " + sistema.nome + " (" + sistema.tipo + ")");
-        System.out.println("Acompanha: " + discoExterno.nome + " " + discoExterno.capacidade + "Gb");
+        if(discoExterno.capacidade < 10) {
+            System.out.println("Acompanha: " + discoExterno.nome + " " + discoExterno.capacidade + "Gb");
+        }
+        else {
+            System.out.println("Acompanha: " + discoExterno.nome + " " + discoExterno.capacidade + "Tb");
+        }
     }
     public void addMemoriaUSB (MemoriaUSB musb) {
         this.discoExterno = musb;
